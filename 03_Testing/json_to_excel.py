@@ -1,8 +1,8 @@
 import jsonlines
 import pandas as pd
 
-file1 = '/Users/nicolaiklutke/Desktop/ChatGPTSeminar/03_Testing/predictions/instructgpt-babbage_predictions_de.jsonl'
-file2 = '/Users/nicolaiklutke/Desktop/ChatGPTSeminar/03_Testing/predictions/fine_tuned_bloom_predictions_de2.jsonl'
+file1 = 'file-path'
+file2 = 'file-path'
 
 data = []
 
@@ -22,4 +22,4 @@ with jsonlines.open(file1) as reader1, jsonlines.open(file2) as reader2:
 
 
 df = pd.DataFrame(data)
-df.to_excel('/Users/nicolaiklutke/Desktop/ChatGPTSeminar/03_Testing/humaneval.xlsx', index=False)
+df.to_excel('file-path', index=False)
