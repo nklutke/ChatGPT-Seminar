@@ -3,11 +3,11 @@ import json
 import time
 
 # Load your OpenAI API key
-openai.api_key = "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"
+openai.api_key = "XXXXXXXX"
 
 # Read the user_oriented_instructions.jsonl file
 instructions = []
-with open("/Users/nicolaiklutke/Desktop/ChatGPTSeminar/03_Testing/user_oriented_instructions_de.jsonl", "r") as f:
+with open("file-path", "r") as f:
     for line in f:
         data = json.loads(line)
         instructions.append(data)
@@ -27,7 +27,7 @@ def get_instructgpt_response(prompt):
 
 # Save the responses to instructgpt-ada_predictions.jsonl
 def save_responses(responses):
-    with open("/Users/nicolaiklutke/Desktop/ChatGPTSeminar/03_Testing/instructgpt-babbage_predictions_de.jsonl", "w") as f:
+    with open("file-path", "w") as f:
         for response in responses:
             f.write(json.dumps(response) + "\n")
 
